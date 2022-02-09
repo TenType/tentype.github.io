@@ -1,0 +1,18 @@
+{
+  "name": "sandbox-website",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "parcel build src/*.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
+	"serve": "parcel src/*.html"
+  },
+  "author": "TenType",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.2.1",
+    "typescript": "^4.5.5"
+  }
+}
