@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "ESNext",
+		"sourceMap": true,
+		"rootDir": "src",
+		"outDir": "public/generated",
+		"esModuleInterop": true,
+		"noEmitOnError": true,
+		// "watch": true,
+		// "strict": true,
+		"removeComments": true,
+		"skipLibCheck": true,
+	},
+	"compileOnSave": true,
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}
