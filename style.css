@@ -1,0 +1,28 @@
+:root {
+	--theme-blue: #0c73d2;
+}
+html {
+	background-color: var(--theme-blue);
+}
+em {
+	color: red;
+	font-style: normal;
+}
+.topic {
+	color: white;
+	text-align: center;
+	font-size: 10vw;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+p {
+	text-align: center;
+}
+
+body {
+	font-family: Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+}
