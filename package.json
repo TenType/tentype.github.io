@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "deploy": "npm run build && gh-pages -d public"
+  }
+}

@@ -1,0 +1,56 @@
+body {
+    background: #202020;
+    color: #c4c4c4;
+    font-family: 'Source Code Pro';
+    padding: 20px;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end);
+}
+
+.no-animate {
+    animation: typing 0s steps(30, end) !important;
+}
+
+.directory {
+    color: #00e1ff;
+    text-shadow: 0 0 5px #00e1ff;
+}
+
+#cursor {
+    animation: blinker 1s linear infinite;
+}
+
+textarea {
+    left: -1000px;
+    position: absolute;
+}
+
+a {
+    color: #0090ff;
+}
+
+.user-input {
+    line-height: 1.5em;
+    color: #ffffff;
+}
+
+@keyframes blinker {  
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

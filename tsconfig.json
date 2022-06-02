@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "rootDir": "src",
+        "outDir": "public/generated",
+        "sourceMap": true,
+        "strict": true,
+        "noEmitOnError": true,
+        "removeComments": true,
+    },
+    "compileOnSave": true,
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
