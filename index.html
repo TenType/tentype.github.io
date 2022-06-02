@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="HTML, CSS">
-	<meta name="description" content="A sandbox website">
-	<title>Hello world</title>
-	<link rel="stylesheet" href="style.css">
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenType</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Source Code Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
+<body onclick="document.getElementById('textbox').focus()">
+    <div id="terminal">
+        <span id="log"></span>
+    </div>
 
-<body>
-	<div class="header">
-		
-	</div>
-	<h1>Hello world</h1>
-	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique totam, tenetur cupiditate possimus rerum et
-		voluptate quo? Eligendi, deserunt nisi.</p>
-	<script src="generated/index.js"></script>
+    <textarea
+        type="text"
+        id="textbox"
+        onkeydown="moveTyper(this)"
+        onkeyup="moveTyper(this)"
+        autofocus
+    ></textarea>
+
+    <span class="directory">
+        <strong>tentype $ </strong>
+    </span>
+    <span class="user-input">
+        <span id="typer"></span>
+        <span id="cursor">█</span>
+    </span>
+    <script src="generated/commands.js"></script>
+    <script src="generated/cursor.js"></script>
+    <script src="generated/util.js"></script>
+    <script src="generated/index.js"></script>
 </body>
-
 </html>
