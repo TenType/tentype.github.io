@@ -9,9 +9,11 @@ const commands: CommandsType = {
     'help': {
         description: 'Literally this command',
         run() {
+            let cmds = '';
             for (const [key, value] of Object.entries(commands)) {
-                echo(`    ${key.padEnd(15)} ${value.description}`);
+                cmds += `    ${key.padEnd(15)} ${value.description}\n`;
             }
+            echoLines(cmds);
         },
     },
 

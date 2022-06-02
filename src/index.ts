@@ -40,6 +40,10 @@ function echo(text: string, style = '') {
     window.scrollTo(0, document.body.offsetHeight);
 }
 
-function echoLines(lines: string, style = '') {
-    lines.split('\n').forEach((line) => echo(line, style));
+function echoLines(lines: string, style = '', delay = 100) {
+    lines.split('\n').forEach((line, index) => {
+        setTimeout(() => {
+            echo(line, style);
+        }, index * delay);
+    });
 }
