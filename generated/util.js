@@ -1,6 +1,6 @@
 "use strict";
-function strip(arr) {
-    const lines = arr[0].split('\n');
+function strip(text) {
+    const lines = (typeof text == 'string' ? text : text[0]).split('\n');
     let indent = 9999;
     lines.forEach(line => {
         let matched = line.match(/^(\s+)\S+/);
