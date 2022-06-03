@@ -16,7 +16,8 @@ const commands: CommandsType = {
         run() {
             let cmds = '';
             for (const [key, value] of Object.entries(commands)) {
-                cmds += `    <span class="command">${key.padEnd(15)}</span>${value.description}\n`;
+                const cmd = `<span class="command">${key}</span>`
+                cmds += `    ${cmd.padEnd(cmd.length - key.length + 15)}${value.description}\n`;
             }
             echoLines(cmds);
         },

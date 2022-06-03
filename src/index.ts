@@ -9,15 +9,17 @@ window.addEventListener('keydown', (event) => {
     if (event.key != 'Enter') return;
 
     const cmd = input.value.toLowerCase().trim();
-    echo(`<span class="directory">tentype $ </span><span class="user-input">${typer.innerHTML}</span>`, 'no-animate');
-
-    if (cmd != '') command(cmd);
+    command(cmd);
 
     typer.innerHTML = '';
     input.value = '';
 });
 
 function command(cmd: string) {
+    echo(`<span class="directory">tentype $ </span><span class="user-input">${cmd}</span>`, 'no-animate');
+
+    if (cmd == '') return;
+
     if (commands.hasOwnProperty(cmd)) {
         commands[cmd].run();
     } else {
@@ -35,6 +37,9 @@ function echo(text: string, style = '') {
 
     next.innerHTML = text;
     next.className = style;
+
+    linkCommands(next);
+
     log.appendChild(next);
 
     window.scrollTo(0, document.body.offsetHeight);
@@ -46,4 +51,11 @@ function echoLines(lines: string, style = '', delay = 100) {
             echo(line, style);
         }, index * delay);
     });
+}
+
+function linkCommands(element: HTMLElement) {
+    const commands = element.getElementsByClassName('command');
+    for (const cmd of commands) {
+        cmd.setAttribute('onclick', 'command(this.innerHTML)');
+    }
 }
