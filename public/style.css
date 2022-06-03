@@ -18,8 +18,17 @@ p {
 }
 
 .directory {
-    color: #00e1ff;
-    text-shadow: 0 0 5px #00e1ff;
+    color: #00ff15;
+    text-shadow: 0 0 5px #00ff15;
+}
+
+.header {
+    line-height: 0.9em;
+}
+
+.command {
+    color: #e1d900;
+    text-shadow: 0 0 5px #e1d900;
 }
 
 #cursor {
@@ -33,6 +42,11 @@ textarea {
 
 a {
     color: #0090ff;
+}
+
+a:hover {
+    background: #0090ff;
+    color: #202020;
 }
 
 .user-input {

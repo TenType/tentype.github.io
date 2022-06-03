@@ -1,5 +1,5 @@
-function strip(arr: TemplateStringsArray): string {
-    const lines = arr[0].split('\n');
+function strip(text: TemplateStringsArray | string): string {
+    const lines = (typeof text == 'string' ? text : text[0]).split('\n');
 
     // Find the minimum indentation of the lines
     let indent = 9999;

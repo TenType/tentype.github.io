@@ -21,7 +21,7 @@ function command(cmd: string) {
     if (commands.hasOwnProperty(cmd)) {
         commands[cmd].run();
     } else {
-        echo(`The command '${cmd}' does not exist. Type 'help' for a list of commands.`);
+        echo(`The command '${cmd}' does not exist. Enter <span class="command">help</span> for a list of commands.`);
     }
 }
 
